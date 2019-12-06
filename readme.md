@@ -1,7 +1,7 @@
 # cep-webpack-plugin
 
 
-Webpack plugin that emits a sitemap.xml file.
+Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.
 
 ## Installation
 <a href='https://npmjs.com/package/cep-webpack-plugin'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
