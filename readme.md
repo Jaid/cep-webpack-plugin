@@ -6,13 +6,43 @@ Webpack plugin that emits a sitemap.xml file.
 ## Installation
 <a href='https://npmjs.com/package/cep-webpack-plugin'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
 ```bash
-npm install --save-dev cep-webpack-plugin@^0.1.0
+npm install --save-dev cep-webpack-plugin@^1.0.0
 ```
 <a href='https://yarnpkg.com/package/cep-webpack-plugin'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
 ```bash
-yarn add --dev cep-webpack-plugin@^0.1.0
+yarn add --dev cep-webpack-plugin@^1.0.0
 ```
 
+
+
+## Documentation
+
+* [cep-webpack-plugin](#module_cep-webpack-plugin)
+    * [module.exports](#exp_module_cep-webpack-plugin--module.exports) ⏏
+        * [new module.exports([options])](#new_module_cep-webpack-plugin--module.exports_new)
+        * _instance_
+            * [.options](#module_cep-webpack-plugin--module.exports+options) : <code>Options</code>
+        * _inner_
+            * [~Options](#module_cep-webpack-plugin--module.exports..Options) : <code>Object</code>
+
+**Kind**: Exported class  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>Options</code> | Plugin options |
+
+**Kind**: instance property of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
+**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
+**Properties**
+
+| Name | Type | Default |
+| --- | --- | --- |
+| [fileName] | <code>string</code> | <code>&quot;CSXS/manifest.xml&quot;</code> | 
+| identifier | <code>string</code> |  | 
+| [version] | <code>string</code> | <code>&quot;1.0.0&quot;</code> | 
+| title | <code>string</code> |  | 
+| [requiredCefVersion] | <code>string</code> | <code>&quot;5.0&quot;</code> | 
+|  | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;), (string\|Array.&lt;string&gt;)&gt;</code> |  | 
 
 
 
