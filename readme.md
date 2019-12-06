@@ -43,6 +43,7 @@ yarn add --dev cep-webpack-plugin@^1.0.2
 | title | <code>string</code> |  | 
 | [requiredCefVersion] | <code>string</code> | <code>&quot;5.0&quot;</code> | 
 | [apps] | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;\|&quot;indesign&quot;\|&quot;incopy&quot;\|&quot;premierePro&quot;\|&quot;prelude&quot;\|&quot;afterEffects&quot;\|&quot;animate&quot;\|&quot;audition&quot;\|&quot;dreamweaver&quot;\|&quot;muse&quot;\|&quot;bridge&quot;\|&quot;rush&quot;), (string\|Array.&lt;string&gt;)&gt;</code> | <code>{photoshop: &quot;20.0&quot;}</code> | 
+| [mainPath] | <code>string</code> | <code>&quot;./index.html&quot;</code> | 
 
 
 
