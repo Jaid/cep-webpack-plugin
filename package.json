@@ -1,0 +1,44 @@
+{
+  "webpackConfigJaid": "nodeClass",
+  "version": "0.1.0",
+  "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "dependencies": {
+    "@absolunet/fss": "^1.6.1",
+    "@babel/runtime": "^7.5.5",
+    "lodash": "^4.17.15",
+    "magina": "^1.1.0",
+    "resolve-any": "^1.0.0",
+    "sitemap": "^4.0.1"
+  },
+  "devDependencies": {
+    "@absolunet/fsp": "^1.6.1",
+    "acorn": "^6.3.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-jaid": "^6.9.0",
+    "browserslist-config-jaid-node": "^2.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-jaid": "^1.28.0",
+    "jest": "^24.8.0",
+    "load-json-file": "^6.2.0",
+    "pify": "^4.0.1",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.39.1",
+    "webpack-config-jaid": "^5.27.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "babel:prod": "rimraf dist/transpiled/production && NODE_ENV=production babel --out-dir dist/transpiled/production --source-maps true src",
+    "babel:dev": "rimraf dist/transpiled/development && NODE_ENV=development babel --out-dir dist/transpiled/development src",
+    "babel:test": "rimraf dist/transpiled/test && NODE_ENV=test babel --out-dir dist/transpiled/test src",
+    "build:prod": "NODE_ENV=production webpack",
+    "build:dev": "NODE_ENV=development webpack",
+    "test": "npm run build:prod && NODE_ENV=production MAIN=dist/package/production jest --runInBand",
+    "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
+    "test:dev": "NODE_ENV=test jest --runInBand",
+    "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
+    "prepareActionJest": "npm run build:prod"
+  },
+  "name": "cep-webpack-plugin",
+  "description": "Webpack plugin that emits a sitemap.xml file."
+}
