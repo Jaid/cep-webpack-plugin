@@ -6,11 +6,11 @@ Webpack plugin that emits a sitemap.xml file.
 ## Installation
 <a href='https://npmjs.com/package/cep-webpack-plugin'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
 ```bash
-npm install --save cep-webpack-plugin@^0.1.0
+npm install --save-dev cep-webpack-plugin@^0.1.0
 ```
 <a href='https://yarnpkg.com/package/cep-webpack-plugin'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
 ```bash
-yarn add cep-webpack-plugin@^0.1.0
+yarn add --dev cep-webpack-plugin@^0.1.0
 ```
 
 
