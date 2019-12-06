@@ -41,5 +41,5 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "cep-webpack-plugin",
-  "description": "Webpack plugin that emits a sitemap.xml file."
+  "description": "Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions."
 }
