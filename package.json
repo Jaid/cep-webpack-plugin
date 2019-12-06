@@ -4,7 +4,7 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
     "@absolunet/fss": "^1.6.2",
-    "@babel/runtime": "^7.7.4",
+    "@babel/runtime": "^7.7.5",
     "ensure-array": "^1.0.0",
     "ensure-object": "^1.0.1",
     "lodash": "^4.17.15",
@@ -16,7 +16,7 @@
     "@absolunet/fsp": "^1.6.2",
     "acorn": "^7.1.0",
     "babel-jest": "^24.9.0",
-    "babel-preset-jaid": "^6.11.2",
+    "babel-preset-jaid": "^6.11.3",
     "browserslist-config-jaid-node": "^2.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.7.2",
