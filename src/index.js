@@ -18,6 +18,7 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} title
  * @prop {string} [requiredCefVersion=5.0]
  * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} [apps={photoshop: "20.0"}]
+ * @prop {string} [mainPath=./index.html]
  */
 
 /**
@@ -42,6 +43,7 @@ export default class {
       apps: {
         photoshop: "20.0",
       },
+      mainPath: "./index.html",
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
@@ -91,7 +93,7 @@ export default class {
               "@Id": extensionId,
               DispatchInfo: {
                 Resources: {
-                  MainPath: "./index.html",
+                  MainPath: this.options.mainPath,
                 },
                 Lifecycle: {
                   AutoVisible: true,
