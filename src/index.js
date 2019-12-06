@@ -17,7 +17,7 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} [version=1.0.0]
  * @prop {string} title
  * @prop {string} [requiredCefVersion=5.0]
- * @prop {Object<"photoshop"|"illustrator",string|string[]>}
+ * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} [apps={photoshop: "20.0"}]
  */
 
 /**
