@@ -27,6 +27,7 @@ const webpackId = "CepWebpackPlugin"
  * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} [apps={photoshop: "20.0"}]
  * @prop {string} [mainPath=./index.html]
  * @prop {boolean|PanelOptions} [panel=false]
+ * @prop {boolean} minify=true
  */
 
 /**
@@ -53,6 +54,7 @@ export default class {
       },
       mainPath: "./index.html",
       panel: true,
+      minify: true,
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
@@ -131,7 +133,7 @@ export default class {
           },
         }
       }
-      const content = xmlWriter.create(model, {encoding: "UTF-8"}).end({pretty: true})
+      const content = xmlWriter.create(model, {encoding: "UTF-8"}).end({pretty: !this.options.minify})
       const fileName = await resolveAny(this.options.fileName)
       compilation.assets[fileName] = {
         source: () => content,
