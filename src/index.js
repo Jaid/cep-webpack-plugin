@@ -39,7 +39,7 @@ export default class {
       fileName: "CSXS/manifest.xml",
       version: "1.0.0",
       title: optionsObject.title || optionsObject.identifier,
-      requiredCefVersion: "5.0",
+      requiredCefVersion: "9.0",
       apps: {
         photoshop: "20.0",
       },
@@ -51,23 +51,20 @@ export default class {
 
   apply(compiler) {
     compiler.hooks.emit.tapPromise(webpackId, async compilation => {
+      const extensionManifestVersion = "8.0"
       const extensionId = `${this.options.identifier}.extension`
       const hosts = []
       for (const [appId, requiredVersion] of Object.entries(this.options.apps)) {
         const app = applications[appId]
-        const requiredVersions = ensureArray(requiredVersion)
-        if (requiredVersions.length === 1) {
-          requiredVersions.push("99.0")
-        }
         hosts.push({
           "@Name": app.host,
-          "@Version": `[${requiredVersions.join(",")}]`,
+          "@Version": requiredVersion,
         })
       }
       const model = {
         ExtensionManifest: {
           "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-          "@Version": "5.0",
+          "@Version": extensionManifestVersion,
           "@ExtensionBundleId": this.options.identifier,
           "@ExtensionBundleVersion": this.options.version,
           "@ExtensionBundleName": this.options.title,
