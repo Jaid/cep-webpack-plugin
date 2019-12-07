@@ -11,13 +11,6 @@ import applications from "lib/applications.yml"
 const webpackId = "CepWebpackPlugin"
 
 /**
- * @typedef {Object} PanelOptions
- * @prop {string} [title=this.options.title]
- * @prop {number} [width=200]
- * @prop {number} [height=600]
- */
-
-/**
  * @typedef {Object} Options
  * @prop {string} [fileName=CSXS/manifest.xml]
  * @prop {string} identifier
@@ -28,6 +21,13 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} [mainPath=./index.html]
  * @prop {boolean|PanelOptions} [panel=false]
  * @prop {boolean} minify=true
+ */
+
+/**
+ * @typedef {Object} PanelOptions
+ * @prop {string} [title=this.options.title]
+ * @prop {number} [width=200]
+ * @prop {number} [height=600]
  */
 
 /**
