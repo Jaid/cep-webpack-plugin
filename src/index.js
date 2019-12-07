@@ -11,22 +11,22 @@ const webpackId = "CepWebpackPlugin"
 
 /**
  * @typedef {Object} Options
- * @prop {string} [fileName=CSXS/manifest.xml]
+ * @prop {string} fileName=CSXS/manifest.xml
  * @prop {string} identifier
- * @prop {string} [version=1.0.0]
+ * @prop {string} version=1.0.0
  * @prop {string} title
- * @prop {string} [requiredCefVersion=5.0]
- * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} [apps={photoshop: "20.0"}]
- * @prop {string} [mainPath=./index.html]
- * @prop {boolean|PanelOptions} [panel=false]
+ * @prop {string} requiredCefVersion=5.0
+ * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} apps={photoshop: "20"}
+ * @prop {string} mainPath=./index.html
+ * @prop {boolean|PanelOptions} panel=false
  * @prop {boolean} minify=true
  */
 
 /**
  * @typedef {Object} PanelOptions
- * @prop {string} [title=this.options.title]
- * @prop {number} [width=200]
- * @prop {number} [height=600]
+ * @prop {string} title=this.options.title
+ * @prop {number} width=200
+ * @prop {number} height=600
  */
 
 /**
