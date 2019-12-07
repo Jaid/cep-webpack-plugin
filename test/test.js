@@ -26,7 +26,10 @@ it("should run", async () => {
     ...getWepbackConfig(name),
     plugins: [
       new CleanWebpackPlugin,
-      new CepWebpackPlugin("example.com"),
+      new CepWebpackPlugin({
+        identifier: "cep-example",
+        title: "CEP Example",
+      }),
     ],
   }
   await pify(webpack)(webpackConfig)

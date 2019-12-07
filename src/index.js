@@ -11,6 +11,13 @@ import applications from "lib/applications.yml"
 const webpackId = "CepWebpackPlugin"
 
 /**
+ * @typedef {Object} PanelOptions
+ * @prop {string} [title=this.options.title]
+ * @prop {number} [width=200]
+ * @prop {number} [height=600]
+ */
+
+/**
  * @typedef {Object} Options
  * @prop {string} [fileName=CSXS/manifest.xml]
  * @prop {string} identifier
@@ -19,6 +26,7 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} [requiredCefVersion=5.0]
  * @prop {Object<"photoshop"|"illustrator"|"indesign"|"incopy"|"premierePro"|"prelude"|"afterEffects"|"animate"|"audition"|"dreamweaver"|"muse"|"bridge"|"rush",string|string[]>} [apps={photoshop: "20.0"}]
  * @prop {string} [mainPath=./index.html]
+ * @prop {boolean|PanelOptions} [panel=false]
  */
 
 /**
@@ -41,9 +49,10 @@ export default class {
       title: optionsObject.title || optionsObject.identifier,
       requiredCefVersion: "9.0",
       apps: {
-        photoshop: "20.0",
+        photoshop: "20",
       },
       mainPath: "./index.html",
+      panel: true,
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
@@ -104,6 +113,23 @@ export default class {
             },
           },
         },
+      }
+      if (this.options.panel) {
+        const panelOptions = {
+          title: this.options.title,
+          height: 600,
+          width: 200,
+        }
+        model.ExtensionManifest.DispatchInfoList.UI = {
+          Type: "Panel",
+          Menu: panelOptions.title,
+          Geometry: {
+            Size: {
+              Height: panelOptions.height,
+              Width: panelOptions.width,
+            },
+          },
+        }
       }
       const content = xmlWriter.create(model, {encoding: "UTF-8"}).end({pretty: true})
       const fileName = await resolveAny(this.options.fileName)
