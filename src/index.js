@@ -1,6 +1,5 @@
 /** @module cep-webpack-plugin */
 
-import ensureArray from "ensure-array"
 import ensureObject from "ensure-object"
 import ow from "ow"
 import resolveAny from "resolve-any"
