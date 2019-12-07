@@ -20,6 +20,9 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} mainPath=./index.html
  * @prop {boolean|PanelOptions} panel=false
  * @prop {boolean} minify=true
+ * @prop {boolean} debug=`webpackMode==="development"`
+ * @prop {number} debugPort=8400
+ * @prop {string} debugFileName=".debug"
  */
 
 /**
@@ -28,6 +31,8 @@ const webpackId = "CepWebpackPlugin"
  * @prop {number} width=200
  * @prop {number} height=600
  */
+
+const xmlCreateOptions = {encoding: "UTF-8"}
 
 /**
  * @class
@@ -54,11 +59,17 @@ export default class {
       mainPath: "./index.html",
       panel: true,
       minify: true,
+      debug: null,
+      debugPort: 8400,
+      debugFileName: ".debug",
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
   }
 
+  /**
+   * @param {import("webpack").Compiler} compiler
+   */
   apply(compiler) {
     compiler.hooks.emit.tapPromise(webpackId, async compilation => {
       const extensionManifestVersion = "8.0"
@@ -132,11 +143,38 @@ export default class {
           },
         }
       }
-      const content = xmlWriter.create(model, {encoding: "UTF-8"}).end({pretty: !this.options.minify})
+      const content = xmlWriter.create(model, xmlCreateOptions).end({pretty: !this.options.minify})
       const fileName = await resolveAny(this.options.fileName)
       compilation.assets[fileName] = {
         source: () => content,
         size: () => content.length,
+      }
+      const isDevelopmentMode = compilation.compiler.options.mode === "development"
+      const shouldEmitDebug = this.options.debug === null ? isDevelopmentMode : Boolean(this.options.debug)
+      if (shouldEmitDebug) {
+        let currentDebugPort = this.options.debugPort
+        const debugModel = {
+          ExtensionList: {
+            Extension: {
+              "@Id": extensionId,
+              HostList: {
+                Host: hosts.map(host => {
+                  const debugPort = currentDebugPort
+                  currentDebugPort++
+                  return {
+                    "@Name": host["@Name"],
+                    "@Port": debugPort,
+                  }
+                }),
+              },
+            },
+          },
+        }
+        const debugContent = xmlWriter.create(debugModel, xmlCreateOptions).end({pretty: !this.options.minify})
+        compilation.assets[this.options.debugFileName] = {
+          source: () => debugContent,
+          size: () => debugContent.length,
+        }
       }
     })
   }
