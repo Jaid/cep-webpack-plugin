@@ -23,8 +23,8 @@ yarn add --dev cep-webpack-plugin@^1.1.0
         * _instance_
             * [.options](#module_cep-webpack-plugin--module.exports+options) : <code>Options</code>
         * _inner_
-            * [~PanelOptions](#module_cep-webpack-plugin--module.exports..PanelOptions) : <code>Object</code>
             * [~Options](#module_cep-webpack-plugin--module.exports..Options) : <code>Object</code>
+            * [~PanelOptions](#module_cep-webpack-plugin--module.exports..PanelOptions) : <code>Object</code>
 
 **Kind**: Exported class  
 
@@ -33,15 +33,6 @@ yarn add --dev cep-webpack-plugin@^1.1.0
 | [options] | <code>Options</code> | Plugin options |
 
 **Kind**: instance property of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
-**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
-**Properties**
-
-| Name | Type | Default |
-| --- | --- | --- |
-| [title] | <code>string</code> | <code>&quot;this.options.title&quot;</code> | 
-| [width] | <code>number</code> | <code>200</code> | 
-| [height] | <code>number</code> | <code>600</code> | 
-
 **Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
 **Properties**
 
@@ -56,6 +47,15 @@ yarn add --dev cep-webpack-plugin@^1.1.0
 | [mainPath] | <code>string</code> | <code>&quot;./index.html&quot;</code> | 
 | [panel] | <code>boolean</code> \| <code>PanelOptions</code> | <code>false</code> | 
 | minify | <code>boolean</code> | <code>true</code> | 
+
+**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
+**Properties**
+
+| Name | Type | Default |
+| --- | --- | --- |
+| [title] | <code>string</code> | <code>&quot;this.options.title&quot;</code> | 
+| [width] | <code>number</code> | <code>200</code> | 
+| [height] | <code>number</code> | <code>600</code> | 
 
 
 
