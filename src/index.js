@@ -87,6 +87,11 @@ export default class {
             HostList: {
               Host: hosts,
             },
+            LocaleList: {
+              Locale: {
+                "@Code": "All",
+              },
+            },
           },
           DispatchInfoList: {
             Extension: {
