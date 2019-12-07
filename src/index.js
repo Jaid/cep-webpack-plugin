@@ -121,7 +121,7 @@ export default class {
           height: 600,
           width: 200,
         }
-        model.ExtensionManifest.DispatchInfoList.UI = {
+        model.ExtensionManifest.DispatchInfoList.Extension.DispatchInfo.UI = {
           Type: "Panel",
           Menu: panelOptions.title,
           Geometry: {
