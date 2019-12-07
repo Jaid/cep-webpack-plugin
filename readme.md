@@ -15,49 +15,6 @@ yarn add --dev cep-webpack-plugin@^1.2.1
 
 
 
-## Documentation
-
-* [cep-webpack-plugin](#module_cep-webpack-plugin)
-    * [module.exports](#exp_module_cep-webpack-plugin--module.exports) ⏏
-        * [new module.exports([options])](#new_module_cep-webpack-plugin--module.exports_new)
-        * _instance_
-            * [.options](#module_cep-webpack-plugin--module.exports+options) : <code>Options</code>
-        * _inner_
-            * [~Options](#module_cep-webpack-plugin--module.exports..Options) : <code>Object</code>
-            * [~PanelOptions](#module_cep-webpack-plugin--module.exports..PanelOptions) : <code>Object</code>
-
-**Kind**: Exported class  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [options] | <code>Options</code> | Plugin options |
-
-**Kind**: instance property of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
-**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
-**Properties**
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| fileName | <code>string</code> | <code>&quot;CSXS/manifest.xml&quot;</code> |  |
-| identifier | <code>string</code> |  |  |
-| version | <code>string</code> | <code>&quot;1.0.0&quot;</code> |  |
-| title | <code>string</code> |  |  |
-| requiredCefVersion | <code>string</code> | <code>&quot;5.0&quot;</code> |  |
-| apps | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;\|&quot;indesign&quot;\|&quot;incopy&quot;\|&quot;premierePro&quot;\|&quot;prelude&quot;\|&quot;afterEffects&quot;\|&quot;animate&quot;\|&quot;audition&quot;\|&quot;dreamweaver&quot;\|&quot;muse&quot;\|&quot;bridge&quot;\|&quot;rush&quot;), (string\|Array.&lt;string&gt;)&gt;</code> | <code>{photoshop:</code> | "20"} |
-| mainPath | <code>string</code> | <code>&quot;./index.html&quot;</code> |  |
-| panel | <code>boolean</code> \| <code>PanelOptions</code> | <code>false</code> |  |
-| minify | <code>boolean</code> | <code>true</code> |  |
-
-**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
-**Properties**
-
-| Name | Type | Default |
-| --- | --- | --- |
-| title | <code>string</code> | <code>&quot;this.options.title&quot;</code> | 
-| width | <code>number</code> | <code>200</code> | 
-| height | <code>number</code> | <code>600</code> | 
-
-
 
 ## License
 ```text
