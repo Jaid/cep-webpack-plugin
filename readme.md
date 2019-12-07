@@ -6,11 +6,11 @@ Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.
 ## Installation
 <a href='https://npmjs.com/package/cep-webpack-plugin'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
 ```bash
-npm install --save-dev cep-webpack-plugin@^1.0.2
+npm install --save-dev cep-webpack-plugin@^1.1.0
 ```
 <a href='https://yarnpkg.com/package/cep-webpack-plugin'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
 ```bash
-yarn add --dev cep-webpack-plugin@^1.0.2
+yarn add --dev cep-webpack-plugin@^1.1.0
 ```
 
 
@@ -55,6 +55,7 @@ yarn add --dev cep-webpack-plugin@^1.0.2
 | [apps] | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;\|&quot;indesign&quot;\|&quot;incopy&quot;\|&quot;premierePro&quot;\|&quot;prelude&quot;\|&quot;afterEffects&quot;\|&quot;animate&quot;\|&quot;audition&quot;\|&quot;dreamweaver&quot;\|&quot;muse&quot;\|&quot;bridge&quot;\|&quot;rush&quot;), (string\|Array.&lt;string&gt;)&gt;</code> | <code>{photoshop: &quot;20.0&quot;}</code> | 
 | [mainPath] | <code>string</code> | <code>&quot;./index.html&quot;</code> | 
 | [panel] | <code>boolean</code> \| <code>PanelOptions</code> | <code>false</code> | 
+| minify | <code>boolean</code> | <code>true</code> | 
 
 
 
