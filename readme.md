@@ -36,26 +36,26 @@ yarn add --dev cep-webpack-plugin@^1.2.0
 **Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
 **Properties**
 
-| Name | Type | Default |
-| --- | --- | --- |
-| [fileName] | <code>string</code> | <code>&quot;CSXS/manifest.xml&quot;</code> | 
-| identifier | <code>string</code> |  | 
-| [version] | <code>string</code> | <code>&quot;1.0.0&quot;</code> | 
-| title | <code>string</code> |  | 
-| [requiredCefVersion] | <code>string</code> | <code>&quot;5.0&quot;</code> | 
-| [apps] | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;\|&quot;indesign&quot;\|&quot;incopy&quot;\|&quot;premierePro&quot;\|&quot;prelude&quot;\|&quot;afterEffects&quot;\|&quot;animate&quot;\|&quot;audition&quot;\|&quot;dreamweaver&quot;\|&quot;muse&quot;\|&quot;bridge&quot;\|&quot;rush&quot;), (string\|Array.&lt;string&gt;)&gt;</code> | <code>{photoshop: &quot;20.0&quot;}</code> | 
-| [mainPath] | <code>string</code> | <code>&quot;./index.html&quot;</code> | 
-| [panel] | <code>boolean</code> \| <code>PanelOptions</code> | <code>false</code> | 
-| minify | <code>boolean</code> | <code>true</code> | 
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| fileName | <code>string</code> | <code>&quot;CSXS/manifest.xml&quot;</code> |  |
+| identifier | <code>string</code> |  |  |
+| version | <code>string</code> | <code>&quot;1.0.0&quot;</code> |  |
+| title | <code>string</code> |  |  |
+| requiredCefVersion | <code>string</code> | <code>&quot;5.0&quot;</code> |  |
+| apps | <code>Object.&lt;(&quot;photoshop&quot;\|&quot;illustrator&quot;\|&quot;indesign&quot;\|&quot;incopy&quot;\|&quot;premierePro&quot;\|&quot;prelude&quot;\|&quot;afterEffects&quot;\|&quot;animate&quot;\|&quot;audition&quot;\|&quot;dreamweaver&quot;\|&quot;muse&quot;\|&quot;bridge&quot;\|&quot;rush&quot;), (string\|Array.&lt;string&gt;)&gt;</code> | <code>{photoshop:</code> | "20"} |
+| mainPath | <code>string</code> | <code>&quot;./index.html&quot;</code> |  |
+| panel | <code>boolean</code> \| <code>PanelOptions</code> | <code>false</code> |  |
+| minify | <code>boolean</code> | <code>true</code> |  |
 
 **Kind**: inner typedef of [<code>module.exports</code>](#exp_module_cep-webpack-plugin--module.exports)  
 **Properties**
 
 | Name | Type | Default |
 | --- | --- | --- |
-| [title] | <code>string</code> | <code>&quot;this.options.title&quot;</code> | 
-| [width] | <code>number</code> | <code>200</code> | 
-| [height] | <code>number</code> | <code>600</code> | 
+| title | <code>string</code> | <code>&quot;this.options.title&quot;</code> | 
+| width | <code>number</code> | <code>200</code> | 
+| height | <code>number</code> | <code>600</code> | 
 
 
 
