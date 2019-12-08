@@ -1,6 +1,5 @@
 import fsp from "@absolunet/fsp"
 import {CleanWebpackPlugin} from "clean-webpack-plugin"
-import {last} from "lodash"
 import ms from "ms.macro"
 import path from "path"
 import pify from "pify"

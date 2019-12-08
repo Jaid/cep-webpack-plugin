@@ -5,6 +5,7 @@ import ensureObject from "ensure-object"
 import ow from "ow"
 import resolveAny from "resolve-any"
 import xmlWriter from "xmlbuilder"
+import ensureArray from "ensure-array"
 
 import applications from "lib/applications.yml"
 
@@ -26,6 +27,7 @@ const webpackId = "CepWebpackPlugin"
  * @prop {string} debugFileName=".debug"
  * @prop {string} [scriptSourceFile] Absolute path to a JavaScript file that will be used as the host script entry point
  * @prop {string} scriptFileName=client.jsx
+ * @prop {string|string[]} cefParams="--enable-nodejs"
  */
 
 /**
@@ -67,6 +69,7 @@ export default class {
       debugFileName: ".debug",
       scriptSourceFile: null,
       scriptFileName: "client.jsx",
+      cefParams: "--enable-nodejs",
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
@@ -147,6 +150,10 @@ export default class {
             },
           },
         }
+      }
+      if (this.options.cefParams) {
+        const params = ensureArray(this.options.cefParams)
+        model.ExtensionManifest.DispatchInfoList.Extension.DispatchInfo.Resources.CEFCommandLine = params
       }
       if (this.options.scriptSourceFile) {
         const scriptContent = await fsp.readFile(this.options.scriptSourceFile, "utf8")

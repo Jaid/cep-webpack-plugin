@@ -5,6 +5,7 @@
   "dependencies": {
     "@absolunet/fss": "^1.6.2",
     "@babel/runtime": "^7.7.5",
+    "ensure-array": "^1.0.0",
     "ensure-object": "^1.0.1",
     "lodash": "^4.17.15",
     "ow": "^0.15.0",
