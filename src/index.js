@@ -153,7 +153,9 @@ export default class {
       }
       if (this.options.cefParams) {
         const params = ensureArray(this.options.cefParams)
-        model.ExtensionManifest.DispatchInfoList.Extension.DispatchInfo.Resources.CEFCommandLine.Parameter = params
+        model.ExtensionManifest.DispatchInfoList.Extension.DispatchInfo.Resources.CEFCommandLine = {
+          Parameter: params,
+        }
       }
       if (this.options.scriptSourceFile) {
         const scriptContent = await fsp.readFile(this.options.scriptSourceFile, "utf8")
