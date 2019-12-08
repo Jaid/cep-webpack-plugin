@@ -1,5 +1,6 @@
 /** @module cep-webpack-plugin */
 
+import fsp from "@absolunet/fsp"
 import ensureObject from "ensure-object"
 import ow from "ow"
 import resolveAny from "resolve-any"
@@ -23,6 +24,8 @@ const webpackId = "CepWebpackPlugin"
  * @prop {boolean} debug=`webpackMode==="development"`
  * @prop {number} debugPort=8400
  * @prop {string} debugFileName=".debug"
+ * @prop {string} [scriptSourceFile] Absolute path to a JavaScript file that will be used as the host script entry point
+ * @prop {string} scriptFileName=client.jsx
  */
 
 /**
@@ -62,6 +65,8 @@ export default class {
       debug: null,
       debugPort: 8400,
       debugFileName: ".debug",
+      scriptSourceFile: null,
+      scriptFileName: "client.jsx",
       ...optionsObject,
     }
     ow(this.options.identifier, ow.string.nonEmpty)
@@ -142,6 +147,15 @@ export default class {
             },
           },
         }
+      }
+      if (this.options.scriptSourceFile) {
+        const scriptContent = await fsp.readFile(this.options.scriptSourceFile, "utf8")
+        const scriptFileName = await resolveAny(this.options.scriptFileName)
+        compilation.assets[scriptFileName] = {
+          source: () => scriptContent,
+          size: () => scriptContent.length,
+        }
+        model.ExtensionManifest.DispatchInfoList.Extension.DispatchInfo.Resources.ScriptPath = `./${scriptFileName}`
       }
       const content = xmlWriter.create(model, xmlCreateOptions).end({pretty: !this.options.minify})
       const fileName = await resolveAny(this.options.fileName)
