@@ -1,14 +1,32 @@
 # cep-webpack-plugin
 
 
-Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.
+<a href="https://raw.githubusercontent.com/Jaid/cep-webpack-plugin/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/cep-webpack-plugin?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/cep-webpack-plugin/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fcep-webpack-plugin%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/cep-webpack-plugin/commits"><img src="https://img.shields.io/github/commits-since/Jaid/cep-webpack-plugin/v2.3.0?style=flat-square&logo=github" alt="Commits since v2.3.0"/></a> <a href="https://github.com/Jaid/cep-webpack-plugin/commits"><img src="https://img.shields.io/github/last-commit/Jaid/cep-webpack-plugin?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/cep-webpack-plugin/issues"><img src="https://img.shields.io/github/issues/Jaid/cep-webpack-plugin?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/cep-webpack-plugin"><img src="https://img.shields.io/npm/v/cep-webpack-plugin?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/cep-webpack-plugin/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/cep-webpack-plugin?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/cep-webpack-plugin"><img src="https://img.shields.io/npm/dm/cep-webpack-plugin?style=flat-square&logo=npm" alt="Downloads"/></a>
+
+**Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
-<a href='https://npmjs.com/package/cep-webpack-plugin'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/cep-webpack-plugin"><img src="https://img.shields.io/badge/npm-cep--webpack--plugin-C23039?style=flat-square&logo=npm" alt="cep-webpack-plugin on npm"/></a>
 ```bash
 npm install --save-dev cep-webpack-plugin@^2.3.0
 ```
-<a href='https://yarnpkg.com/package/cep-webpack-plugin'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/cep-webpack-plugin"><img src="https://img.shields.io/badge/Yarn-cep--webpack--plugin-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="cep-webpack-plugin on Yarn"/></a>
 ```bash
 yarn add --dev cep-webpack-plugin@^2.3.0
 ```
@@ -16,11 +34,31 @@ yarn add --dev cep-webpack-plugin@^2.3.0
 
 
 
+
+
+
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/cep-webpack-plugin.git
+cd cep-webpack-plugin
+npm install
+```
+Testing in production environment:
+```bash
+npm run test
+```
+
+
 ## License
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
