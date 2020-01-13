@@ -41,5 +41,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "cep-webpack-plugin",
-  "description": "Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions."
+  "description": "Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.",
+  "funding": "https://github.com/sponsors/jaid"
 }
