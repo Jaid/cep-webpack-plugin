@@ -42,5 +42,9 @@
   },
   "name": "cep-webpack-plugin",
   "description": "Webpack plugin that emits a CSXS/manifest.xml file for Adobe CEP extensions.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/cep-webpack-plugin"
+  }
 }
