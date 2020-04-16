@@ -46,5 +46,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/cep-webpack-plugin"
-  }
+  },
+  "homepage": "https://github.com/Jaid/cep-webpack-plugin",
+  "keywords": []
 }
