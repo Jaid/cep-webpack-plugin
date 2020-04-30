@@ -47,5 +47,15 @@
     "url": "https://github.com/jaid/cep-webpack-plugin"
   },
   "homepage": "https://github.com/Jaid/cep-webpack-plugin",
-  "keywords": []
+  "keywords": [
+    "adobe-cep",
+    "adobe-cep-extensions",
+    "cep-webpack-plugin",
+    "csxs",
+    "manifest",
+    "manifest-xml",
+    "webpack",
+    "webpack-emit",
+    "webpack-plugin"
+  ]
 }
